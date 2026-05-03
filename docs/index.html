@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Robotics and embedded systems portfolio — projects, technologies, and skills."
+    />
+    <title>Bakel Bakel Begededum · AI &amp; Robotics Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Orbitron:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <main id="top">
+      <header class="site-identity">
+        <p class="site-identity-name">Bakel Bakel Begededum</p>
+        <p class="site-identity-role">AI &amp; Robotics Engineer</p>
+      </header>
+      <section class="hero" id="intro" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Systems · Mechatronics · Software</p>
+          <h1 id="hero-title" class="visually-hidden">
+            Robotics and AI engineer — introduction
+          </h1>
+          <div
+            class="hero-carousel"
+            id="hero-carousel"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Introduction"
+          >
+            <div class="hero-carousel-viewport">
+              <div class="hero-carousel-track" id="hero-carousel-track">
+                <p class="hero-carousel-slide is-active" data-slide="0">
+                  I am a highly driven
+                  <span class="hero-carousel-highlight">Robotics and AI Engineer</span>
+                  with a strong commitment to
+                  <span class="hero-carousel-highlight">excellence</span>
+                  and building
+                  <span class="hero-carousel-highlight">impactful technology</span>.
+                </p>
+                <p class="hero-carousel-slide" data-slide="1">
+                  I have proven myself in the highly competitive
+                  <span class="hero-carousel-highlight">Upwork</span>
+                  marketplace, earning
+                  <span class="hero-carousel-highlight">Top Rated</span>
+                  status through consistent delivery, technical quality, and
+                  client satisfaction.
+                </p>
+                <p class="hero-carousel-slide" data-slide="2">
+                  I have studied, researched and developed robotics in
+                  <span class="hero-carousel-highlight">Europe</span>,
+                  architected
+                  <span class="hero-carousel-highlight">autonomous inspection fleets</span>
+                  for energy-sector clients in the
+                  <span class="hero-carousel-highlight">USA</span>,
+                  engineered
+                  <span class="hero-carousel-highlight">embedded AI-robotics systems</span>
+                  for industrial clients in the
+                  <span class="hero-carousel-highlight">Middle East</span>,
+                  and founded Africa's most active robotics organization,
+                  <span class="hero-carousel-highlight">Aurora Robotics</span>,
+                  from the ground up in
+                  <span class="hero-carousel-highlight">Nigeria</span>.
+                </p>
+                <p class="hero-carousel-slide" data-slide="3">
+                  With over
+                  <span class="hero-carousel-highlight">10 years</span>
+                  of experience in
+                  <span class="hero-carousel-highlight">software and web development</span>,
+                  I bring a strong engineering foundation into my
+                  <span class="hero-carousel-highlight">3+ years</span>
+                  of focused work in
+                  <span class="hero-carousel-highlight">robotics and artificial intelligence</span>.
+                  You would want me on your team
+                </p>
+              </div>
+            </div>
+            <div
+              class="hero-carousel-dots"
+              role="tablist"
+              aria-label="Introduction slides"
+            >
+              <button
+                type="button"
+                class="hero-carousel-dot"
+                role="tab"
+                aria-selected="true"
+                aria-label="Slide 1 of 4"
+                data-slide-to="0"
+              ></button>
+              <button
+                type="button"
+                class="hero-carousel-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 2 of 4"
+                data-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                class="hero-carousel-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 3 of 4"
+                data-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                class="hero-carousel-dot"
+                role="tab"
+                aria-selected="false"
+                aria-label="Slide 4 of 4"
+                data-slide-to="3"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img
+            class="portrait"
+            src="images/hero-0.png"
+            alt="Portrait"
+            width="480"
+            height="640"
+            fetchpriority="high"
+          />
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-head">
+          <h2 id="skills-title" class="section-title">Skills</h2>
+        </div>
+        <div class="skills-toolbar">
+          <div class="skills-filter-primary">
+            <button type="button" class="btn-all" id="btn-all-skills" aria-pressed="true">
+              Show All
+            </button>
+            <span class="filter-hint" id="filter-hint" aria-live="polite"></span>
+          </div>
+          <div
+            class="skill-chips"
+            id="skill-chips"
+            role="toolbar"
+            aria-label="Filter portfolio by skill area"
+          ></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title" class="section-title">Portfolio</h2>
+        </div>
+        <div
+          class="project-section-tabs"
+          id="project-section-tabs"
+          role="tablist"
+          aria-label="Portfolio category"
+        ></div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
