@@ -1,0 +1,50 @@
+Milestone Guide / Hourly Work Plan
+Debian Linux Setup for C Compiling of Modbus Code
+
+Recommended contract type: Hourly
+Recommended hourly rate: $35/hr
+Suggested weekly limit: 10 hrs/week
+Estimated total time: 4 to 6 hours, depending on the current Raspberry Pi setup and the state of the existing C code.
+Project duration to select: Less than 1 month
+Practical delivery target: 1 to 3 days after access is provided
+
+Why hourly is better here:
+The client already has the C application, but the unknowns are in the Raspberry Pi environment, missing dependencies, compiler errors, library linking, permissions, and the Modbus communication setup. Since those issues are easier to diagnose after logging into the Pi, hourly is safer and fairer than a fixed price.
+
+Suggested work breakdown:
+
+Phase 1: Raspberry Pi access and environment check
+Estimated time: 0.5 to 1 hour
+Tasks:
+- Connect through Raspberry Pi Connect.
+- Check Debian/Raspberry Pi OS version.
+- Review folder structure and existing source code.
+- Identify the build method, such as Makefile, CMake, gcc command, or manual compile command.
+- Check existing compiler, library, and package setup.
+
+Phase 2: Compiler and dependency setup
+Estimated time: 1 to 2 hours
+Tasks:
+- Install or repair build-essential, gcc/g++, make, cmake, git, Python tools if needed, and any Modbus-related dependencies required by the code.
+- Resolve include-path and linker-path issues.
+- Check serial, USB, or network dependencies depending on whether the app uses Modbus RTU or Modbus TCP.
+
+Phase 3: Build, run, and debug the application
+Estimated time: 1.5 to 2 hours
+Tasks:
+- Compile the C application.
+- Fix compile errors that come from missing headers, missing libraries, wrong paths, or incompatible commands.
+- Run the application on the Pi.
+- Check permissions for serial ports or network access if needed.
+- Confirm that the app starts without runtime failure.
+
+Phase 4: Handover notes
+Estimated time: 0.5 to 1 hour
+Tasks:
+- Provide the exact commands used to build and run the application.
+- Note any installed packages or changed settings.
+- Leave a simple repeatable process for future use.
+- If useful, create a small run script or README-style note.
+
+Proposal note to include if needed:
+This should be a short setup and debugging job once access is available. I would start by checking the existing build files and dependencies, then get the application compiling and running directly on the Raspberry Pi.

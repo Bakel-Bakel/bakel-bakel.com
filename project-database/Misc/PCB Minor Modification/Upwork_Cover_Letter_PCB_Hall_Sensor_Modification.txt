@@ -1,0 +1,18 @@
+BAKEL BAKEL
+Senior Hardware & Embedded Engineer | AI/Robotics Engineer | Erasmus Mundus Scholar
+github.com/Bakel-Bakel
+
+Hardware Engineer: PCB Minor Modification for Hall Sensor Replacement and Orientation Adjustment
+
+I work as a hardware, embedded, AI and robotics engineer, with practical experience in sensor based systems, embedded electronics, GPIO interfaces and robotics hardware. For this PCB task, the key work is not a full redesign. It is careful part substitution, pin check, footprint and orientation review, then clean schematic and board updates.
+
+I would start by comparing the A1220 and A3144 package, pinout, output behaviour, supply range, pullup needs and active logic. Then I would inspect the existing schematic, update the symbol or footprint only where needed, rotate and place each Hall sensor so the sensing face points toward the center, and keep routing changes local. After that I would run ERC, DRC, net checks, clearance review and a final visual check against your reference image.
+
+A few of my related projects are Glove Controlled Robotic Arm, where I handled flex sensors, IMU input, Arduino pin mapping and ESP communication: https://github.com/Bakel-Bakel/Glove_Controlled_Robotic_Arm. Hand Sign Gloves Using ML also involved a compact sensor array with Arduino, ESP and Raspberry Pi processing: https://github.com/Bakel-Bakel/Hand_Sign_Gloves_Using_ML. Visible Light Communication is relevant because it uses receiver logic, GPIO control and active high or active low behaviour: https://github.com/Bakel-Bakel/Visible-Light-Communication. Plant Monitoring System also shows practical embedded sensor integration: https://github.com/Bakel-Bakel/plant-monitoring-system.
+
+The tools I use include KiCad, Altium Designer, EasyEDA, LTspice, Arduino IDE, PlatformIO, C/C++, Python, Git and standard schematic and PCB review workflows. I can work with the tool used in your existing files and keep the update limited to the requested sensor replacement and orientation changes.
+
+I am available to handle this as a focused fixed price task. Before any formal contract, I can join a quick call to confirm the PCB tool, the Hall sensor package and the exact reference orientation.
+
+Bakel Bakel
+Senior Hardware & Embedded Engineer | github.com/Bakel-Bakel

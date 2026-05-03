@@ -1,0 +1,19 @@
+BAKEL BAKEL
+Senior Hardware & Embedded Engineer | AI/Robotics Engineer | Erasmus Mundus Scholar
+github.com/Bakel-Bakel
+
+Title: ESP32-S3 Serial Data Board
+
+I read through your description, and the main task is clear: you already have a schematic and 2-layer PCB, but the board is having WiFi signal issues and needs to be cleaned up into a proper 4-layer design around the ESP32-S3, u.fl antenna, RS232 interface, battery power, and charging circuit.
+
+This is the kind of job where the fix should not be treated as a simple layer-count change. The RF section, antenna path, ground reference, power routing, battery charger layout, RS232 level interface, and manufacturability all need to be checked together. My background is in embedded systems, real-time data acquisition, wireless/IoT systems, robotics hardware integration, and industrial communication platforms, so I am comfortable working through both the electrical and practical reliability side of a board like this.
+
+For this project, I would start by reviewing the current KiCad schematic, PCB layout, BOM, and the specific WiFi issue you are seeing. From there, I would check the ESP32-S3 placement, u.fl feed, grounding, stackup, routing around the RF area, power rails, charger section, and the 5V RS232 interface. After that, I would convert the board to a 4-layer layout, update the design where needed, run the basic checks, and prepare the files for JLCPCB ordering and assembly.
+
+A few related projects from my portfolio include an IIoT platform for industrial data acquisition, an IoT plant monitoring system, a visible light communication system, and real-time telemetry work for robotics systems. Those projects are not the same as this board, but they are relevant to the data acquisition, embedded communication, wireless transfer, and power-aware design decisions involved here.
+
+Before starting, I would like to confirm two things: are you open to component substitutions if some selected parts are not suitable for JLCPCB assembly, and can you share the current KiCad project with the exact symptoms of the WiFi issue?
+
+Best regards,
+Bakel Bakel
+Senior Hardware & Embedded Engineer | github.com/Bakel-Bakel

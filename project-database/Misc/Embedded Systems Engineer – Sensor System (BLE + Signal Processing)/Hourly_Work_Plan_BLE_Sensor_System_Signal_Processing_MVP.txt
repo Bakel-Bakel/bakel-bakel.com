@@ -1,0 +1,80 @@
+Hourly Work Plan and Proposal Setup
+Embedded Systems Engineer - Sensor System (BLE + Signal Processing)
+
+Recommended contract type: Hourly
+Recommended hourly rate: $30/hr
+Suggested weekly availability: 30 hrs/week, with an initial validation sprint of 40 to 60 hours
+Project duration to select: 3 to 6 months
+Best proposal setting: Ongoing hourly contract
+
+Why hourly is better here:
+The client has clearly described this as a validation-driven MVP, not a fixed-spec build. The work includes sensor selection, noisy real-world signal acquisition, BLE communication, battery considerations, and system architecture decisions. Those unknowns are exactly why an hourly structure is more honest than a fixed milestone price.
+
+Recommended opening bid:
+$30/hr
+
+Recommended weekly limit:
+30 hrs/week
+
+Suggested first-sprint work plan:
+
+Phase 1: Requirements, assumptions, and sensor architecture
+Estimated time: 4 to 6 hours
+Tasks:
+- Review the target sensing use case and what the MVP must prove.
+- Confirm vibration sensor and possible acoustic-emission sensor options.
+- Define early sampling-rate and feature-extraction targets.
+- Clarify gateway expectations for BLE communication.
+- List key risks before implementation begins.
+
+Phase 2: Dev-board setup and firmware foundation
+Estimated time: 8 to 12 hours
+Tasks:
+- Set up the chosen dev board, such as nRF52, ESP32, or similar.
+- Prepare the firmware structure for acquisition, processing, BLE output, and power checks.
+- Create a clean task structure if an RTOS is used.
+- Confirm sensor interface, timing, and data buffering approach.
+
+Phase 3: Sensor integration and data acquisition
+Estimated time: 10 to 16 hours
+Tasks:
+- Bring up the vibration sensor and any early acoustic-emission input.
+- Capture raw data under simple test conditions.
+- Check signal noise, stability, dynamic range, and mounting sensitivity.
+- Add buffering or sample windows for signal processing.
+
+Phase 4: Basic signal processing and feature extraction
+Estimated time: 10 to 14 hours
+Tasks:
+- Implement first-pass RMS, FFT, peak, and frequency-band features.
+- Compare raw data with extracted features.
+- Identify what features are useful for validation and what still needs improvement.
+- Prepare sample output that can be discussed with the client.
+
+Phase 5: BLE communication to gateway
+Estimated time: 8 to 12 hours
+Tasks:
+- Define a simple BLE data structure for streaming or periodic feature updates.
+- Send selected data or feature summaries to the external gateway.
+- Test connection behavior, update rate, and basic reliability.
+- Note any throughput or power tradeoffs found during testing.
+
+Phase 6: Battery and low-power review
+Estimated time: 6 to 10 hours
+Tasks:
+- Review sleep, sampling, BLE interval, and processing tradeoffs.
+- Estimate early battery impact from sampling and BLE usage.
+- Recommend changes before compact hardware design begins.
+
+Phase 7: Validation notes and next-hardware recommendation
+Estimated time: 4 to 6 hours
+Tasks:
+- Document the current MVP behavior.
+- Summarize signal quality and risks.
+- Recommend the next firmware, sensor, power, and hardware direction.
+- Provide a clear handover for the custom hardware phase.
+
+Short version to use in the proposal terms:
+Rate: $30/hr
+Availability: 30 hrs/week
+Initial target: build and validate a dev-board MVP that reads the sensor, extracts basic RMS/FFT features, sends data over BLE, and documents the power and signal-quality risks before moving into custom hardware.

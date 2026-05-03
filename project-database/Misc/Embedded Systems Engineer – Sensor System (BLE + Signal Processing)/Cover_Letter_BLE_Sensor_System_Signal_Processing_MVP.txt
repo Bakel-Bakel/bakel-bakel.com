@@ -1,0 +1,19 @@
+BAKEL BAKEL
+Senior Hardware & Embedded Engineer | AI/Robotics Engineer | Erasmus Mundus Scholar
+github.com/Bakel-Bakel
+
+Embedded Systems Engineer for BLE Sensor System and Signal Processing MVP
+
+I read through your description, and the main task is clear: this is a validation project first, not just a quick firmware build. You need to know whether the sensing approach is good enough, whether vibration and possible acoustic-emission data can produce useful features, and whether the first dev-board system can support BLE communication and battery operation before you move into custom hardware.
+
+That is the right way to approach this type of product. I have worked on embedded sensor systems where the difficult part was not only reading a sensor, but dealing with noisy signals, timing, real-time data flow, wireless or networked communication, and the decisions that affect the next hardware revision. Relevant examples include my work on PPG-based signal processing, GNSS-denied sensor fusion, the glove-controlled robotic arm, and IIoT data acquisition systems.
+
+For Phase 1, I would begin by tightening the technical assumptions: target vibration range, sampling rate, sensor mounting method, gateway requirements, expected battery life, and what success should look like in the MVP. From there, I would set up the dev board firmware, build the acquisition pipeline, extract early features such as RMS, FFT, peak values, and frequency bands, and send the selected data over BLE to the gateway. I would also keep power use visible from the beginning so the prototype does not become difficult to shrink later.
+
+The deliverable should not just be code. It should include test notes, sample captures, signal-quality observations, risks found during validation, and a clear recommendation for the next integrated design.
+
+A couple of useful questions before starting: do you already have a preferred vibration sensor or acoustic-emission sensor in mind? Also, is the external gateway already defined, or should the BLE data format and gateway-side requirements be part of Phase 1?
+
+Best regards,
+Bakel Bakel
+Senior Hardware & Embedded Engineer | github.com/Bakel-Bakel

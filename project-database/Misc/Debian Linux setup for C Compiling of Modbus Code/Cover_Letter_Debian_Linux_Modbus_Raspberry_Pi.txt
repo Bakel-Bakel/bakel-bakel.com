@@ -1,0 +1,19 @@
+BAKEL BAKEL
+Senior Hardware & Embedded Engineer | AI/Robotics Engineer | Erasmus Mundus Scholar
+github.com/Bakel-Bakel
+
+Debian Linux Setup for C Compiling of Modbus Code
+
+I read through your description, and this looks like a focused Raspberry Pi/Linux setup task: the C Modbus application is already written, but the Pi needs to be configured so the code can compile cleanly and run from the device.
+
+I can help with that. My work has covered embedded Linux environments, C/C++ and Python-based robotics systems, industrial data acquisition, networking, driver-level integration, and reproducible development setups. A few relevant examples are the UDC IIoT Platform, where I worked with industrial data acquisition and communication layers, and the Prisma Lab Docker Nav2 setup, where the focus was creating a clean Linux-based environment that other engineers could build and run consistently.
+
+For your Raspberry Pi, I would first connect through Raspberry Pi Connect and inspect the current OS, folder structure, compiler setup, Makefile or build script, required libraries, and any serial or network settings the Modbus app depends on. From there, I would install the missing build tools or dependencies, resolve include-path and linker issues, compile the application, and then run it on the Pi to confirm it starts properly.
+
+If the app needs to talk to a real Modbus device, I would also check whether it is using Modbus RTU over serial/RS485 or Modbus TCP, because that affects the port setup, permissions, and test method. I can leave you with the exact terminal commands, the working build steps, and a short note explaining how to run the program again after the session.
+
+A couple of quick questions before starting: is the Modbus app meant for RTU serial communication or TCP over Ethernet/WiFi? Also, has this same code compiled successfully on another machine before?
+
+Best regards,
+Bakel Bakel
+Senior Hardware & Embedded Engineer | github.com/Bakel-Bakel

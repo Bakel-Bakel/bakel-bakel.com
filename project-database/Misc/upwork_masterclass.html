@@ -1,0 +1,184 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); color: var(--color-text-primary); }
+  .wrap { max-width: 680px; padding: 2rem 0; }
+  .hero { background: #1D9E75; border-radius: var(--border-radius-lg); padding: 2rem; margin-bottom: 2rem; }
+  .hero h1 { font-size: 26px; font-weight: 500; color: #E1F5EE; margin-bottom: 0.5rem; }
+  .hero p { font-size: 15px; color: #9FE1CB; line-height: 1.6; }
+  .badge { display: inline-block; background: #0F6E56; color: #9FE1CB; font-size: 12px; padding: 3px 10px; border-radius: 20px; margin-bottom: 1rem; }
+  .module { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.25rem; background: var(--color-background-primary); }
+  .module-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.25rem; }
+  .module-num { width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; }
+  .num-teal { background: #E1F5EE; color: #0F6E56; }
+  .num-purple { background: #EEEDFE; color: #3C3489; }
+  .num-amber { background: #FAEEDA; color: #633806; }
+  .num-blue { background: #E6F1FB; color: #0C447C; }
+  .num-coral { background: #FAECE7; color: #712B13; }
+  .module-title { font-size: 17px; font-weight: 500; margin-bottom: 2px; }
+  .module-sub { font-size: 13px; color: var(--color-text-secondary); }
+  .step { display: flex; gap: 12px; margin-bottom: 1rem; align-items: flex-start; }
+  .step-dot { width: 6px; height: 6px; min-width: 6px; border-radius: 50%; margin-top: 8px; }
+  .dot-teal { background: #1D9E75; }
+  .dot-purple { background: #534AB7; }
+  .dot-amber { background: #BA7517; }
+  .dot-blue { background: #185FA5; }
+  .dot-coral { background: #993C1D; }
+  .step p { font-size: 14px; line-height: 1.7; color: var(--color-text-primary); }
+  .step strong { font-weight: 500; }
+  .tip { background: var(--color-background-secondary); border-left: 3px solid #1D9E75; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 0.75rem 1rem; margin-top: 1rem; font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+  .tip strong { color: var(--color-text-primary); font-weight: 500; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 1.5rem; }
+  .stat { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.875rem; text-align: center; }
+  .stat-val { font-size: 22px; font-weight: 500; color: #1D9E75; }
+  .stat-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 3px; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 0.5rem 0 1.25rem; }
+  .prompt-box { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 0.875rem 1rem; font-size: 13px; font-family: var(--font-mono); color: #444441; margin-top: 0.75rem; line-height: 1.6; }
+  @media (prefers-color-scheme: dark) {
+    .prompt-box { background: #2C2C2A; color: #D3D1C7; }
+  }
+  .checklist { list-style: none; margin-top: 0.75rem; }
+  .checklist li { font-size: 14px; line-height: 1.7; padding: 0.3rem 0; display: flex; gap: 10px; align-items: flex-start; }
+  .check { font-size: 12px; color: #1D9E75; font-weight: 500; margin-top: 2px; }
+</style>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="badge">Workshop masterclass</div>
+    <h1>Getting jobs on Upwork</h1>
+    <p>A practical, step-by-step system for landing your first (and next) Upwork contract — from profile setup to submitting winning proposals.</p>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <div class="module-num num-teal">1</div>
+      <div>
+        <div class="module-title">Understanding the Upwork ecosystem</div>
+        <div class="module-sub">What you need to know before you apply for anything</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="step"><div class="step-dot dot-teal"></div><p>Upwork is a competitive freelance marketplace. Jobs move fast — postings can receive 50+ proposals within hours of going live. Speed and consistency matter more than perfection.</p></div>
+    <div class="step"><div class="step-dot dot-teal"></div><p><strong>Connects</strong> are the in-platform currency used to submit proposals. You must purchase connects before you can apply for jobs. Budget for this upfront — running out mid-grind will cost you momentum.</p></div>
+    <div class="step"><div class="step-dot dot-teal"></div><p>Upwork uses your IP location to signal where you are based. This can work in your favour — being perceived as EU-based (e.g. Italy) can increase your chances with European clients.</p></div>
+    <div class="step"><div class="step-dot dot-teal"></div><p>The platform has a <strong>Top Rated</strong> badge system. Achieving it can happen within 3 months if you apply aggressively and deliver well. This badge dramatically improves your conversion rate.</p></div>
+    <div class="tip"><strong>Mindset check:</strong> It took one experienced freelancer 50+ applications before landing their first contract. Rejection is part of the process — not a signal to stop.</div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <div class="module-num num-purple">2</div>
+      <div>
+        <div class="module-title">Setting up your search pipeline</div>
+        <div class="module-sub">Organising your skills into searchable job categories</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="step"><div class="step-dot dot-purple"></div><p>Create a saved list of skill-based search categories relevant to your background. Examples: Rust, C++, Machine Learning, AI, Computer Vision, Electronics, PCB Design, Robotics.</p></div>
+    <div class="step"><div class="step-dot dot-purple"></div><p>Use Upwork's search filters — <strong>"Best Matches"</strong> and <strong>"Most Recent"</strong> — to see tailored and fresh listings. Switch between both regularly throughout the day.</p></div>
+    <div class="step"><div class="step-dot dot-purple"></div><p>Enable <strong>Premium email notifications</strong> so new job alerts land in your inbox. When a notification arrives, click straight through — because you're logged in, it takes you directly to the listing.</p></div>
+    <div class="step"><div class="step-dot dot-purple"></div><p>Explore broadly — don't self-limit. Even adjacent categories (e.g. Senior Robotics Engineer, Modular Agricultural Robot) may be a strong match. Check the full job spec before dismissing any listing.</p></div>
+    <div class="tip"><strong>Pro tip:</strong> Organise your saved searches so you can open them in one click each morning. Treat this like a job board dashboard, not a place you browse casually.</div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <div class="module-num num-amber">3</div>
+      <div>
+        <div class="module-title">Writing a winning cover letter</div>
+        <div class="module-sub">Using AI tools to write fast, professional proposals</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="step"><div class="step-dot dot-amber"></div><p>Open the job listing and copy the full job description text. This is your raw input for the cover letter.</p></div>
+    <div class="step"><div class="step-dot dot-amber"></div><p>Open ChatGPT (Premium) or Claude and use a structured prompt. Paste the job description and include specific instructions about tone and formatting.</p></div>
+    <div class="prompt-box">
+      "I am applying for a job on Upwork. Here is the job description: [paste description]. Write me a tailored cover letter. Do not use em-dashes. Keep the tone professional but direct. Highlight relevant technical experience."
+    </div>
+    <div class="step" style="margin-top: 0.875rem;"><div class="step-dot dot-amber"></div><p>Review the AI output and personalise it. Add specific project references, GitHub links, or relevant experience the AI might have missed.</p></div>
+    <div class="step"><div class="step-dot dot-amber"></div><p>Always attach a <strong>relevant CV</strong>. Maintain multiple CVs tailored to different skill areas (e.g. one for embedded/electronics, one for ML/AI, one for web). Match the CV to the job before attaching.</p></div>
+    <div class="step"><div class="step-dot dot-amber"></div><p>If the job asks for <strong>portfolio links</strong>, prepare GitHub URLs or project demos that match the job domain. Have these ready — don't delay your application hunting for links.</p></div>
+    <div class="tip"><strong>Quality control:</strong> AI-generated text often contains em-dashes (—) and generic filler phrases. Always scan and remove these — they signal templated writing to experienced clients.</div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <div class="module-num num-blue">4</div>
+      <div>
+        <div class="module-title">Pricing your proposal correctly</div>
+        <div class="module-sub">Milestone structuring, budgeting, and bidding strategy</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="step"><div class="step-dot dot-blue"></div><p>Most jobs on Upwork can be structured <strong>by milestone</strong> (recommended) or by project. Milestones reduce client risk and increase your chances of being selected.</p></div>
+    <div class="step"><div class="step-dot dot-blue"></div><p><strong>Never exceed the client's stated budget.</strong> If their budget is $250, your total bid must be ≤ $250. Going above signals you haven't read the brief.</p></div>
+    <div class="step"><div class="step-dot dot-blue"></div><p>Use AI to help break the budget into milestones. A good prompt:</p></div>
+    <div class="prompt-box">
+      "The total project budget is $250. Break this into 3 reasonable milestones with descriptions and due dates in days. Keep the milestone names professional and specific."
+    </div>
+    <div class="step" style="margin-top: 0.875rem;"><div class="step-dot dot-blue"></div><p>Aim for <strong>3 milestones</strong> as a default. Six milestones at $30 each creates unnecessary friction for clients. A clean 3-part structure (e.g. $50 / $100 / $100) feels more professional and manageable.</p></div>
+    <div class="step"><div class="step-dot dot-blue"></div><p>Example milestone structure for a $250 project:</p></div>
+    <ul class="checklist" style="margin-left: 18px;">
+      <li><span class="check">→</span><span><strong>Milestone 1 ($50):</strong> System audit and core foundation — 3 days</span></li>
+      <li><span class="check">→</span><span><strong>Milestone 2 ($100):</strong> Core feature development and integration — 7 days</span></li>
+      <li><span class="check">→</span><span><strong>Milestone 3 ($100):</strong> Testing, refinement, and delivery — 4 days</span></li>
+    </ul>
+    <div class="step" style="margin-top: 0.875rem;"><div class="step-dot dot-blue"></div><p>For <strong>project duration</strong>, always quote the minimum of any range given. If the job suggests 1–3 months, quote 1 month. Clients prefer faster timelines and it sets a productive pace.</p></div>
+    <div class="step"><div class="step-dot dot-blue"></div><p><strong>Boosted proposals (bidding):</strong> Only use boost/bid on jobs you are highly confident about AND that are high-value. Do not routinely boost — it drains connects for marginal gain on low-probability applications.</p></div>
+    <div class="tip"><strong>Connects strategy:</strong> Treat connects like ad spend. Concentrate them on jobs that align tightly with your strongest skills. Spray-and-pray wastes budget.</div>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <div class="module-num num-coral">5</div>
+      <div>
+        <div class="module-title">The daily application routine</div>
+        <div class="module-sub">The habits that turn Upwork from side income to main income</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p><strong>Show up every single day.</strong> Upwork rewards consistency. The freelancers who succeed are those who apply morning, afternoon, and evening — not once a week.</p></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p>When starting out, expect to apply for <strong>40–60 jobs</strong> before landing your first contract. This is normal. Each rejection is data, not failure.</p></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p>Open a batch of relevant job listings at the start of each session. Work through them systematically — read, evaluate, apply or skip. Don't linger on individual listings.</p></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p>When a promising listing arrives via email notification, act on it within minutes. Proposals submitted early in a job's lifecycle get more attention than those submitted after 50 others.</p></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p>Build a <strong>CV folder</strong> organised by skill area so you can attach the right CV instantly without back-and-forth. Label each CV clearly: <em>cv-ml-ai.pdf</em>, <em>cv-embedded-electronics.pdf</em>, <em>cv-web-backend.pdf</em>, etc.</p></div>
+    <div class="step"><div class="step-dot dot-coral"></div><p>If you are waiting on a collaborator or mentor for feedback and hear nothing within 3–4 hours — <strong>proceed anyway.</strong> Upwork jobs expire quickly and waiting costs real opportunities.</p></div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-val">50+</div>
+        <div class="stat-label">Avg. applications before first contract</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">3 mo</div>
+        <div class="stat-label">Time to Top Rated with consistent effort</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">Daily</div>
+        <div class="stat-label">Minimum application frequency to succeed</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="module" style="border-color: #9FE1CB;">
+    <div class="module-header">
+      <div class="module-num num-teal">★</div>
+      <div>
+        <div class="module-title">Key principles to carry with you</div>
+        <div class="module-sub">The mindset that separates earners from browsers</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <ul class="checklist">
+      <li><span class="check">✓</span><span>Speed beats perfection. A good proposal submitted early outperforms a perfect one submitted late.</span></li>
+      <li><span class="check">✓</span><span>Match every application — CV, cover letter, and portfolio links — to the specific job. Generic applications get ignored.</span></li>
+      <li><span class="check">✓</span><span>Never bid above a client's stated budget. Respect the brief.</span></li>
+      <li><span class="check">✓</span><span>Use AI to speed up cover letter writing, not to replace your thinking. Always personalise the output.</span></li>
+      <li><span class="check">✓</span><span>Keep your milestone structure simple — 3 milestones is almost always the right number for small to mid-range projects.</span></li>
+      <li><span class="check">✓</span><span>The platform rewards people who treat it like a job. If you put in the hours, the contracts follow.</span></li>
+      <li><span class="check">✓</span><span>Once you achieve Top Rated status, your conversion rate increases significantly. Front-load the grind early.</span></li>
+    </ul>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+Milestone Guide for Upwork
+Project: ESP32 GPS and SD Card Breadboard Setup
+Budget: $30 fixed price
+
+Recommended payment option: By project
+
+Because this is a small $30 wiring and bring-up task, it is better not to split it into several milestones. A single fixed-price project is cleaner and easier for the client to approve.
+
+Use this if Upwork asks for milestone terms:
+
+Milestone 1
+Description: ESP32-C5 GPS and SD card breadboard wiring map, test sketch, and verification support
+Due date: April 29, 2026
+Amount: $30
+
+Project duration field:
+Less than 1 week
+
+What the milestone covers:
+- Identify suitable ESP32-C5 pins for the GPS UART lines, PPS, and SD card SPI lines.
+- Provide a clear pin-to-pin wiring table for breadboard setup.
+- Explain GPS TX, RX, PPS, VCC, and GND connections.
+- Explain SD card CS, MOSI, MISO, SCK, VCC, and GND connections.
+- Provide a basic Arduino ESP32 test sketch for GPS serial output and SD card read/write.
+- Help the client confirm that GPS data is received and the SD card can create/write a file.
+
+Note to use while applying:
+Do not divide this into $10 or $15 milestones. The budget is already small, so one milestone makes the proposal simple and practical.

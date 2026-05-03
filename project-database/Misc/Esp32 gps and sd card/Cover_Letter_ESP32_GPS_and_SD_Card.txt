@@ -1,0 +1,25 @@
+BAKEL BAKEL
+Senior Hardware & Embedded Engineer | AI/Robotics Engineer | Erasmus Mundus Scholar
+github.com/Bakel-Bakel
+
+Title: ESP32 GPS and SD Card Breadboard Setup
+
+Hi,
+
+I read through your description. This is a small bring-up and wiring task: you need the GPS module and SD card module connected correctly to your ESP32-C5-WiFi6-Kit-NXRX, then you need a working test setup that proves both are communicating.
+
+I can help you map the connections clearly on the board, including GPS TX, RX, PPS, power, ground, and the SD card SPI lines. I would first confirm the exact GPS and SD card modules you have, since the pin labels and voltage behavior can vary. After that, I can give you a simple pin-to-pin wiring table for the ESP32, then a small Arduino ESP32 sketch to test GPS serial output and SD card read/write.
+
+I have worked with embedded systems that involve UART data links, sensor modules, microcontroller wiring, and real-time device communication. A few relevant examples include the Glove-Controlled Robotic Arm, where sensor data is read and transmitted through embedded interfaces, and the Plant Monitoring System, which connects several sensors to a microcontroller and sends readings for monitoring.
+
+For this job, I would keep it practical:
+1. Identify safe ESP32 pins for GPS UART, PPS, and SD card SPI.
+2. Provide the board wiring map.
+3. Share a basic test sketch.
+4. Help you verify that GPS data appears and the SD card can create/write a file.
+
+One quick question: what exact GPS module and SD card module are you using, and can you send a clear photo of the ESP32-C5 board with the pin labels visible?
+
+Best regards,
+Bakel Bakel
+Senior Hardware & Embedded Engineer | github.com/Bakel-Bakel
