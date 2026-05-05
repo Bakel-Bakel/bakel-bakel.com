@@ -1425,6 +1425,74 @@
     mql.addEventListener("change", restartTimer);
   }
 
+  const PROJECTS_DISPLAY_BASE = "projects-display/";
+
+  /**
+   * Infinite horizontal strip of images from `projects-display/manifest.json`.
+   */
+  async function initProjectsDisplayMarquee() {
+    const track = el("projects-marquee-track");
+    const section = el("project-photos");
+    if (!track) return;
+
+    let names = [];
+    try {
+      const res = await fetch(`${PROJECTS_DISPLAY_BASE}manifest.json`, {
+        cache: "no-store",
+      });
+      if (!res.ok) {
+        if (section) section.hidden = true;
+        return;
+      }
+      const manifest = await res.json();
+      const list = manifest.images;
+      if (!Array.isArray(list) || list.length === 0) {
+        if (section) section.hidden = true;
+        return;
+      }
+      names = list;
+    } catch (e) {
+      console.warn("projects-display marquee:", e);
+      if (section) section.hidden = true;
+      return;
+    }
+
+    const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    function buildFigures() {
+      const frag = document.createDocumentFragment();
+      for (const name of names) {
+        const fig = document.createElement("figure");
+        fig.className = "projects-marquee-item";
+        const img = document.createElement("img");
+        img.src = PROJECTS_DISPLAY_BASE + encodeURIComponent(name);
+        img.alt = "";
+        img.loading = "lazy";
+        img.decoding = "async";
+        fig.appendChild(img);
+        frag.appendChild(fig);
+      }
+      return frag;
+    }
+
+    const rowA = buildFigures();
+    const rowB = buildFigures();
+    track.appendChild(rowA);
+    track.appendChild(rowB);
+
+    const durationSec = Math.max(36, Math.round(names.length * 6));
+    function applyMotion() {
+      if (mql.matches) {
+        track.style.animation = "none";
+      } else {
+        track.style.animation = `projects-marquee-scroll ${durationSec}s linear infinite`;
+      }
+    }
+    applyMotion();
+    mql.addEventListener("change", applyMotion);
+  }
+
   init();
   initHeroCarousel();
+  initProjectsDisplayMarquee();
 })();
