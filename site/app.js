@@ -1494,12 +1494,61 @@
     track.appendChild(rowA);
     track.appendChild(rowB);
 
+    const viewport = track.closest(".projects-marquee-viewport");
     const durationSec = Math.max(36, Math.round(names.length * 6));
+    const MARQUEE_ARROW_SPEED = 6;
+
+    let marqueeAnimation = null;
+
+    function stopMarqueeAnimation() {
+      if (marqueeAnimation) {
+        marqueeAnimation.cancel();
+        marqueeAnimation = null;
+      }
+    }
+
+    function startMarqueeAnimation() {
+      stopMarqueeAnimation();
+      track.style.removeProperty("animation");
+      track.style.transform = "";
+      marqueeAnimation = track.animate(
+        [{ transform: "translateX(0)" }, { transform: "translateX(-50%)" }],
+        {
+          duration: durationSec * 1000,
+          iterations: Infinity,
+          easing: "linear",
+        },
+      );
+    }
+
+    let marqueeArrowsWired = false;
+    function wireMarqueeArrows() {
+      if (marqueeArrowsWired || !viewport) return;
+      const prev = viewport.querySelector(".projects-marquee-arrow--prev");
+      const next = viewport.querySelector(".projects-marquee-arrow--next");
+      if (!prev || !next) return;
+      marqueeArrowsWired = true;
+      prev.addEventListener("mouseenter", () => {
+        if (marqueeAnimation) marqueeAnimation.playbackRate = -MARQUEE_ARROW_SPEED;
+      });
+      prev.addEventListener("mouseleave", () => {
+        if (marqueeAnimation) marqueeAnimation.playbackRate = 1;
+      });
+      next.addEventListener("mouseenter", () => {
+        if (marqueeAnimation) marqueeAnimation.playbackRate = MARQUEE_ARROW_SPEED;
+      });
+      next.addEventListener("mouseleave", () => {
+        if (marqueeAnimation) marqueeAnimation.playbackRate = 1;
+      });
+    }
+
     function applyMotion() {
       if (mql.matches) {
-        track.style.animation = "none";
+        stopMarqueeAnimation();
+        track.style.transform = "";
       } else {
-        track.style.animation = `projects-marquee-scroll ${durationSec}s linear infinite`;
+        startMarqueeAnimation();
+        wireMarqueeArrows();
       }
     }
     applyMotion();
