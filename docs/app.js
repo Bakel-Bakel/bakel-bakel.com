@@ -751,6 +751,22 @@
 
   const el = (id) => document.getElementById(id);
 
+  /**
+   * Resolve paths relative to the deployed site (GitHub Pages: opening /repo vs /repo/
+   * otherwise breaks relative fetch() and image URLs).
+   * @param {string} relativePath e.g. "data/projects.json"
+   */
+  function assetUrl(relativePath) {
+    const u = new URL(window.location.href);
+    let path = u.pathname;
+    if (/\.html$/i.test(path)) {
+      path = path.replace(/[^/]+$/, "");
+    } else if (!path.endsWith("/")) {
+      path += "/";
+    }
+    return new URL(relativePath.replace(/^\//, ""), u.origin + path).href;
+  }
+
   function normalizeSkill(s) {
     return String(s).trim().toLowerCase().replace(/\s+/g, " ");
   }
@@ -1358,7 +1374,7 @@
     }
 
     try {
-      const res = await fetch("data/projects.json", { cache: "no-store" });
+      const res = await fetch(assetUrl("data/projects.json"), { cache: "no-store" });
       if (!res.ok) throw new Error(res.statusText);
       data = await res.json();
     } catch (e) {
@@ -1425,8 +1441,6 @@
     mql.addEventListener("change", restartTimer);
   }
 
-  const PROJECTS_DISPLAY_BASE = "projects-display/";
-
   /**
    * Infinite horizontal strip of images from `projects-display/manifest.json`.
    */
@@ -1437,7 +1451,7 @@
 
     let names = [];
     try {
-      const res = await fetch(`${PROJECTS_DISPLAY_BASE}manifest.json`, {
+      const res = await fetch(assetUrl("projects-display/manifest.json"), {
         cache: "no-store",
       });
       if (!res.ok) {
@@ -1465,7 +1479,7 @@
         const fig = document.createElement("figure");
         fig.className = "projects-marquee-item";
         const img = document.createElement("img");
-        img.src = PROJECTS_DISPLAY_BASE + encodeURIComponent(name);
+        img.src = assetUrl("projects-display/" + encodeURIComponent(name));
         img.alt = "";
         img.loading = "lazy";
         img.decoding = "async";
